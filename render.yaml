@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: membership-pad
+    runtime: node
+    plan: free
+    buildCommand: npm test
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
